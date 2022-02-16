@@ -1,0 +1,21 @@
+.menu-bar {
+  //flex
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: $spc-20;
+
+  //padding
+  padding: $spc-20;
+
+  .drop-down {
+    display: flex;
+    flex-direction: column;
+
+    .drop-down-button {
+      p {
+        background-color: $color-gray;
+      }
+    }
+  }
+}
