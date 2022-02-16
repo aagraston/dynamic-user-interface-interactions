@@ -33,7 +33,8 @@
 
     //the items revealed after clicking the drop-down
     .drop-down-items {
-      transition: height 0.5s ease;
+      transition: height 0.5s ease, padding 0.5s ease;
+      overflow: hidden;
 
       border: 1px solid $color-gray;
       display: flex;
@@ -44,6 +45,10 @@
       //margin and gap
       padding: $spc-10;
       gap: $spc-10;
+
+      &.hidden {
+        padding: 0px;
+      }
     }
   }
 }
