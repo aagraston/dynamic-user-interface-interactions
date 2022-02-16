@@ -8,14 +8,42 @@
   //padding
   padding: $spc-20;
 
+  //button and drop-down menu inclusive
   .drop-down {
+    color: $color-gray;
     display: flex;
     flex-direction: column;
 
+    //The button to open the dropdown
     .drop-down-button {
-      p {
-        background-color: $color-gray;
+      cursor: pointer;
+      transition: background-color 0.5s ease;
+      color: $color-white;
+      background-color: $color-gray;
+
+      &:hover {
+        background-color: $color-green;
+        color: $color-gray;
       }
+
+      p {
+        padding: 10px;
+      }
+    }
+
+    //the items revealed after clicking the drop-down
+    .drop-down-items {
+      transition: height 0.5s ease;
+
+      border: 1px solid $color-gray;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      //margin and gap
+      padding: $spc-10;
+      gap: $spc-10;
     }
   }
 }
