@@ -1,8 +1,8 @@
-import DropDown from './js/drop-down'
+import DropDown from './js/classToggle'
 import './scss/app.scss'
 
 const menus = document.querySelectorAll('.drop-down')
-const dropDown = DropDown()
+const dropDown = DropDown('hidden')
 
 menus.forEach((element) => {
   const menuToShow = element.querySelector('.drop-down-items')
