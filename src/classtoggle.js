@@ -1,4 +1,4 @@
-const classToggle = (classNameParam) => {
+const construct = (classNameParam) => {
   const className = classNameParam
 
   const off = (container) => {
@@ -20,4 +20,4 @@ const classToggle = (classNameParam) => {
   return { toggle }
 }
 
-export default classToggle
+export default construct

@@ -1,5 +1,7 @@
-import DropDown from './js/classToggle'
+// import DropDown from './js/classToggle'
 import './scss/app.scss'
+
+import DropDown from './classtoggle'
 
 const menus = document.querySelectorAll('.drop-down')
 const dropDown = DropDown('hidden')
