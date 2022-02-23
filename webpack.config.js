@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     index: './src/js/index.js',
     dropdown: './src/js/dropdown.js',
+    mbilemenu: './src/js/mobilemenu.js',
   },
   output: {
     filename: 'js/[name].bundle.js',
@@ -24,6 +25,12 @@ module.exports = {
       title: 'Drop Down Template',
       template: './src/dropdown.html',
       filename: './dropdown.html',
+      inject: true,
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Mobile Menu Template',
+      template: './src/mobilemenu.html',
+      filename: './mobilemenu.html',
       inject: true,
     }),
   ],
