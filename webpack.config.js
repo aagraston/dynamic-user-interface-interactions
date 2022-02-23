@@ -12,9 +12,15 @@ module.exports = {
   devtool: 'eval',
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Your Title Here',
-      template: './src/template.html',
+      title: 'user interface menu',
+      template: './src/index.html',
       filename: './index.html',
+      inject: true,
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Drop Down Template',
+      template: './src/dropdown.html',
+      filename: './dropdown.html',
       inject: true,
     }),
   ],
