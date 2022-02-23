@@ -1,5 +1,5 @@
 // import DropDown from './js/classToggle'
-import './scss/app.scss'
+import '../scss/app.scss'
 
 import DropDown from './classtoggle'
 

@@ -4,11 +4,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   mode: 'development',
   entry: {
-    index: './src/index.js',
-    dropdown: './src/dropdown.js',
+    index: './src/js/index.js',
+    dropdown: './src/js/dropdown.js',
   },
   output: {
-    filename: '[name].bundle.js',
+    filename: 'js/[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
