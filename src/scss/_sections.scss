@@ -59,12 +59,18 @@
 .openable-menu {
   background: $color-gray;
   position: absolute;
-  max-width: 50%;
-  width: 800px;
+  display: block;
+  max-width: 0%;
+  overflow: hidden;
+
+  &.revealed {
+    width: 50%;
+  }
 
   .sub-menu {
     border: 1px solid $color-white;
     padding-bottom: $spc-10;
+    width: 100vw;
     .sub-title {
       border-bottom: 2px solid $color-white;
       padding: $spc-10;
