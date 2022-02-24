@@ -60,8 +60,11 @@
   background: $color-gray;
   position: absolute;
   display: block;
-  max-width: 0%;
+  max-width: 50%;
+  width: 0%;
   overflow: hidden;
+
+  transition: width 0.25s;
 
   &.revealed {
     width: 50%;
