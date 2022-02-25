@@ -85,16 +85,14 @@
     }
     .expandable-items {
       overflow: hidden;
-      padding-left: $spc-10;
-      padding-top: $spc-10;
-      height: 0px;
-      padding: 0;
+      max-height: 0px;
+      padding: 0 0 0 $spc-10;
 
       transition: height 0.25s, padding 0.25s;
 
       &.revealed {
-        height: 100%;
-        padding-bottom: $spc-10;
+        max-height: 900px;
+        padding: $spc-10;
       }
     }
   }
