@@ -72,15 +72,30 @@
 
   .sub-menu {
     border: 1px solid $color-white;
-    padding-bottom: $spc-10;
     width: 100vw;
     .sub-title {
       border-bottom: 2px solid $color-white;
       padding: $spc-10;
+      transition: background-color 0.25s, color 0.25s;
+
+      &:hover {
+        background-color: $color-green;
+        color: $color-gray;
+      }
     }
     .expandable-items {
+      overflow: hidden;
       padding-left: $spc-10;
       padding-top: $spc-10;
+      height: 0px;
+      padding: 0;
+
+      transition: height 0.25s, padding 0.25s;
+
+      &.revealed {
+        height: 100%;
+        padding-bottom: $spc-10;
+      }
     }
   }
 }
