@@ -6,7 +6,8 @@ module.exports = {
   entry: {
     index: './src/js/index.js',
     dropdown: './src/js/dropdown.js',
-    mbilemenu: './src/js/mobilemenu.js',
+    mobilemenu: './src/js/mobilemenu.js',
+    imageslider: './src/js/imageslider.js',
   },
   output: {
     filename: 'js/[name].bundle.js',
@@ -20,18 +21,28 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html',
       inject: true,
+      chunks: ['index'],
     }),
     new HtmlWebpackPlugin({
       title: 'Drop Down Template',
       template: './src/dropdown.html',
       filename: './dropdown.html',
       inject: true,
+      chunks: ['dropdown'],
     }),
     new HtmlWebpackPlugin({
       title: 'Mobile Menu Template',
       template: './src/mobilemenu.html',
       filename: './mobilemenu.html',
       inject: true,
+      chunks: ['mobilemenu'],
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Image Slider Template',
+      template: './src/imageslider.html',
+      filename: './imageslider.html',
+      inject: true,
+      chunks: ['imageslider'],
     }),
   ],
   module: {
