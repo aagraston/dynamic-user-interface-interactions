@@ -16,7 +16,31 @@ module.exports = {
     clean: true,
   },
   devtool: 'eval',
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss/i,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset',
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      },
+    ],
+  },
   plugins: [
+    new ImageMinimizerPlugin({
+      minimizer: {
+        implementation: ImageMinimizerPlugin.imageminMinify,
+        options: {
+          plugins: [['optipng', { optimzationLevel: 5 }]],
+        },
+      },
+    }),
     new HtmlWebpackPlugin({
       title: 'user interface menu',
       template: './src/index.html',
@@ -46,33 +70,4 @@ module.exports = {
       chunks: ['imageslider'],
     }),
   ],
-  module: {
-    rules: [
-      {
-        test: /\.s[ac]ss/i,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-      },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'asset/resource',
-      },
-    ],
-  },
-  optimization: {
-    minimizer: [
-      '...',
-      new ImageMinimizerPlugin({
-        minimizer: {
-          implementation: ImageMinimizerPlugin.imageminMinify,
-          options: {
-            plugins: [['optipng', { optimizationLevel: 5 }]],
-          },
-        },
-      }),
-    ],
-  },
 }
