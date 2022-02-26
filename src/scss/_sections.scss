@@ -97,3 +97,21 @@
     }
   }
 }
+
+//image slider section
+
+.image-slider-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  .image-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+
+    img {
+      width: 600px;
+    }
+  }
+}
